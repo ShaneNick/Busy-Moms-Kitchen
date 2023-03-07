@@ -32,6 +32,23 @@ header h1 {
 
 
 
+nav{
+    width: 100%;
+}
+
+.navbar-rightside{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    /* justify-content: right; */
+    padding: 0;
+}
 
 nav ul li {
  list-style-type: none;
