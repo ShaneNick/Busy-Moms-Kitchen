@@ -14,14 +14,12 @@ color: white;
 
 .container{
   display: flex;
-  flex-wrap: wrap;
-  height: 50px;
-  width: 100%;
+  align-items: center;
 }
 
-
-
-
+.nav{
+  display: flex;
+}
 nav ul li {
  list-style-type: none;
  margin: 30px;
