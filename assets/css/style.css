@@ -89,3 +89,14 @@ header input {
     justify-content: center;
     
 }
+
+.entree-box {
+    border: white;
+    background: grey;
+    padding: 50px;
+    margin: 20px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    
+}
