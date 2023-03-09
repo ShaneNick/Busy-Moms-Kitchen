@@ -79,7 +79,7 @@ header input {
     
 }
 
-.food-container {
+.food-contanier {
     display: flex;
    
 }
@@ -125,4 +125,16 @@ header input {
     width: 500px;
     display: flex;
     justify-content: center;
+}
+
+aside {
+    border: white;
+    background: grey;
+    padding: 75px;
+    margin-right: 50px;
+    margin-left: 75px;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    
 }
