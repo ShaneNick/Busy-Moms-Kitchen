@@ -78,3 +78,14 @@ header input {
     height: 40px;
     
 }
+
+.appetizer-box {
+    border: white;
+    background: grey;
+    padding: 50px;
+    margin: 20px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    
+}
