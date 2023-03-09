@@ -116,3 +116,13 @@ header input {
     justify-content: center;
     
 }
+
+.snack-box {
+    border: white;
+    background: grey;
+    padding: 50px;
+    margin: 20px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
