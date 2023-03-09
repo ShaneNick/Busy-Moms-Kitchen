@@ -68,3 +68,13 @@ header input {
     height: 35px;
     outline: 0;
 }
+
+.welcome-pg {
+    border: white;
+    background: grey;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    
+}
