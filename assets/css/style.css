@@ -79,6 +79,11 @@ header input {
     
 }
 
+.food-container {
+    display: flex;
+   
+}
+
 .appetizer-box {
     border: white;
     background: grey;
@@ -91,6 +96,17 @@ header input {
 }
 
 .entree-box {
+    border: white;
+    background: grey;
+    padding: 50px;
+    margin: 20px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.dessert-box {
     border: white;
     background: grey;
     padding: 50px;
