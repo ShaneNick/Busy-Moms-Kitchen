@@ -32,26 +32,10 @@ function getFoodList(){
 /*fetch('https://api.spoonacular.com/recipes/random?number=1&tags=vegetarian,dessert')
 .then((data) => {return data.json()});*/
 
-let display;
 
-/*fetch('https://api.spoonacular.com/recipes/random?apiKey=8eaad0a5d1f7418493824951d345fe76')
-    .then(function (response) {
-      if (response.ok) {
-        response.json().then(function (data) {
-          display(data, recipeOfTheDay);
-        });
-      } else {
-        alert('Error: ' + response.statusText);
-      }
-    })
-    .catch(function (error) {
-      alert('Unable to find a meal');
-	 
-    });*/
-	
 function displayRecipe(recipe) {
   // Get the HTML element where the recipe data will be displayed
-  var recipeOfTheDay = document.getElementById("aside");
+  var recipeOfTheDay = document.getElementById("recipeOfTheDay");
 
   // Create the recipe data HTML elements
   var recipeName = document.createElement("h2");
