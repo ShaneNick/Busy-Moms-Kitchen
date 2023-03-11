@@ -57,8 +57,8 @@
       <aside id="recipeOfTheDay">Feature Recipe
         <h2 class="recipeName"></h2>
         <img class="recipeImage">
-        <p class =recipeSummary></p>
-        <p class =recipeInstructions></p>
+        <p class ="recipeSummary"></p>
+        <p class ="recipeInstructions"></p>
       </aside>  
 
   
@@ -66,13 +66,23 @@
       </div>
 
       <!--this section allows users to connect with site by inputting personal info-->
-        <footer>Connect with us!</footer>
-        <ul>
-           <input type="text" placeholder="Name">
-           <input type="text" placeholder="Last Name">
-           <input type="text" placeholder="Email">
-        </ul>
+        <footer>
+          <form id="newsletter-form" onsubmit="submitForm(event)">
+            <div class="Newsletter">
+              <h2>Connect With Us!</h2>
+              <p>Keep up to date whenever we add new recipes</p>
+            </div>
+            <div class="txt_entered" style="background-color: grey";>
+              <input type="text" placeholder="Name" name="name" required>
+              <input type="text" placeholder="Email address" name="mail" required>
+            </div>
+            <div class="submission">
+              <input type="button" value="Subscribe" onclick="submitForm(event)">
+            </div>
+          </form>
+        </footer>
 
+      <!--Social media links-->
         <div>Follow us</div>
         <p><a href="https://www.facebook.com/profile.php?id=100090349982790" target="_blank">Facebook</a></p>
         <p><a href="https://www.instagram.com/busymomskitchenrecipes/">Instagram</a></p>
