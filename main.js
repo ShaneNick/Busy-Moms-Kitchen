@@ -1,30 +1,59 @@
-const search = document.getElementById('search');
-const featureRecipe = document.getElementById('featureRecipe');
-const foodList = document.getElementById('foodList');
+
+//BEGINNING OF SEARCH BAR----------------------------------------
+const searchForm = document.querySelector('.search-container');
+const searchInput = searchForm.querySelector('input');
+const cardContainer = document.querySelector('.card-container');
+
+searchForm.addEventListener('submit', e => {
+  e.preventDefault()});
+  
+  const searchedFood = searchInput.value;
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': 'c738b8e630msh46d9946134aa62fp15873bjsnf8b31cb51c1d',
+      'X-RapidAPI-Host': 'webknox-recipes.p.rapidapi.com'
+    }
+  };
+  
+  fetch('https://webknox-recipes.p.rapidapi.com/recipes/findByIngredients?ingredients=apples%2Cflour%2Csugar&number=5', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+
+function displayResults(results) {
+  cardContainer.innerHTML = '';
+  
+  results.forEach(result => {
+    const recipeCard = document.createElement('div');
+    recipeCard.classList.add('recipeCard');
+    
+    const recipeTitle = document.createElement('h3');
+    recipeTitle.textContent = result.title;
+    
+    const recipeImage = document.createElement('img');
+    recipeImage.src = result.image;
+    
+    const recipeSummary = document.createElement('p');
+    recipeSummary.textContent = result.summary;
+    
+    recipeCard.appendChild(recipeTitle);
+    recipeCard.appendChild(recipeImage);
+    recipeCard.appendChild(recipeSummary);
+    
+    cardContainer.appendChild(recipeCard);
+  });
+}
+
+//BEGINNING OF FEATURED RECIPE SECTION---------------------------
+//Checking to see if more than 4 hrs 
 const form = document.querySelector('form');
-
-
-//Will fetch data from Spoonacular
-const API_KEY = '8eaad0a5d1f7418493824951d345fe76';
-const SEARCH_ENDPOINT = 'https://api.spoonacular.com/recipes/complexSearch';
-
-
-
-//WebKnox, provides Recipe Cards
-const options = {
-	method: 'POST',
-	headers: {
-		'X-RapidAPI-Key': 'c738b8e630msh46d9946134aa62fp15873bjsnf8b31cb51c1d',
-		'X-RapidAPI-Host': 'webknox-recipes.p.rapidapi.com'
-	},
-};
-
 const apiKey = "8eaad0a5d1f7418493824951d345fe76";
 const apiUrl = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}`;
 const recipeOfTheDay = document.getElementById("recipeOfTheDay");
 const lastFetchTime = localStorage.getItem("lastFetchTime");
 
-//Checking to see if more than 4 hrs 
+
 if (!lastFetchTime || (Date.now() - lastFetchTime > 24 * 60 * 60 * 1000)) {
   fetchRecipe();
 } else {
@@ -54,6 +83,7 @@ function displayRecipe(recipe) {
   `;
 }
 
+//BEGINNING OF CONTACT SECTION----------------------------------
 function submitForm(event) {
   event.preventDefault(); // prevent the form from submitting normally
   var data = {
@@ -75,3 +105,5 @@ function submitForm(event) {
 
   
 }
+
+
