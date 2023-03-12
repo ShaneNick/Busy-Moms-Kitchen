@@ -13,8 +13,7 @@ color: white;
 
 
 .container{
-  /* height: px; */
-  /* width: 100%; */
+
 }
 
 header{
@@ -138,3 +137,76 @@ aside {
     justify-content: center;
     
 }
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+footer h2{
+    width: fit-content;
+    font-size: 50px;
+}
+
+footer p{
+    width: fit-content;
+    font-size: 20px;
+    align-items: center;
+}
+
+
+.div.txt_entered{
+    width: fit-content;
+}
+
+/* Style the form element with a border around it */
+form {
+    border: 4px solid grey;
+    background-color: gray;
+    border-radius: 25px;
+    margin:5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Add some padding and a grey background color to containers */
+  .container {
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 25px;
+    align-content: center;
+  }
+  
+  /* Style the input elements and the submit button */
+  input[type=text], input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 25px;
+  }
+  
+  /* Add margins to the checkbox */
+  input[type=checkbox] {
+    margin-top: 16px;
+  }
+  
+  /* Style the submit button */
+  input[type=button] {
+    background-color: lightpink;
+    color: grey;
+    border: none;
+    border-radius: 12px;
+    font-size: 30px;
+  }
+  
+  input[type=submit]:hover {
+    opacity: 0.8;
+  }
+

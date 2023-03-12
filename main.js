@@ -19,58 +19,59 @@ const options = {
 	},
 };
 
-/*fetch('https://webknox-recipes.p.rapidapi.com/recipes/visualizeRecipe', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+const apiKey = "8eaad0a5d1f7418493824951d345fe76";
+const apiUrl = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}`;
+const recipeOfTheDay = document.getElementById("recipeOfTheDay");
+const lastFetchTime = localStorage.getItem("lastFetchTime");
 
-
-function getFoodList(){
-    let searchInputTxt = document.getElementById('search-input').ariaValueMax.trim();
-}*/
-
-/*fetch('https://api.spoonacular.com/recipes/random?number=1&tags=vegetarian,dessert')
-.then((data) => {return data.json()});*/
-
-
-function displayRecipe(recipe) {
-  // Get the HTML element where the recipe data will be displayed
-  var recipeOfTheDay = document.getElementById("recipeOfTheDay");
-
-  // Create the recipe data HTML elements
-  var recipeName = document.createElement("h2");
-  recipeName.innerText = recipe.title;
-  var recipeImage = document.createElement("img");
-  recipeImage.src = recipe.image;
-  recipeImage.alt = recipe.title;
-  var recipeSummary = document.createElement("p");
-  recipeSummary.innerHTML = recipe.summary;
-  var recipeInstructions = document.createElement("p");
-  recipeInstructions.innerHTML = recipe.instructions;
-
-  // Append the recipe data elements to the HTML container
-  recipeOfTheDay.appendChild(recipeName);
-  recipeOfTheDay.appendChild(recipeImage);
-  recipeOfTheDay.appendChild(recipeSummary);
-  recipeOfTheDay.appendChild(recipeInstructions);
+//Checking to see if more than 4 hrs 
+if (!lastFetchTime || (Date.now() - lastFetchTime > 24 * 60 * 60 * 1000)) {
+  fetchRecipe();
+} else {
+  displayRecipe(JSON.parse(localStorage.getItem("recipe")));
 }
 
-var apiKey = "8eaad0a5d1f7418493824951d345fe76";
-var apiUrl = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}`;
-fetch(apiUrl)
-  .then(function(response) {
-    if (response.ok) {
-      // Convert the response to JSON format
-      response.json().then(function(data) {
-        // Call the display function with the recipe data
-        displayRecipe(data.recipes[0]);
-      });
-    } else {
-      // Handle error if API request fails
-      console.log("Error: " + response.statusText);
-    }
-  })
-  .catch(function(error) {
-    // Handle error if fetch request fails
-    console.log("Unable to fetch recipe: " + error.message);
-  });
+//Calls on new recipe from api
+function fetchRecipe() {
+  fetch(apiUrl)
+    .then(response => response.ok ? response.json() : Promise.reject(response))
+    .then(data => {
+      const recipe = data.recipes[0];
+      localStorage.setItem("recipe", JSON.stringify(recipe));
+      localStorage.setItem("lastFetchTime", Date.now());
+      displayRecipe(recipe);
+    })
+    .catch(error => console.error(`Unable to fetch recipe: ${error.message}`));
+}
+
+//displays all recipe info within aside 
+function displayRecipe(recipe) {
+  recipeOfTheDay.innerHTML = `
+    <h2>${recipe.title}</h2>
+    <img src="${recipe.image}" alt="${recipe.title}">
+    <p>${recipe.summary}</p>
+    <p>${recipe.instructions}</p>
+  `;
+}
+
+function submitForm(event) {
+  event.preventDefault(); // prevent the form from submitting normally
+  var data = {
+    name: document.querySelector('#newsletter-form [name="name"]').value,
+    email: document.querySelector('#newsletter-form [name="mail"]').value,
+  };
+  
+  if (!email.includes("@")) {
+    var errorMessage = document.getElementById("error-message");
+    errorMessage.innerHTML = "Not a valid email address.";
+    return;
+  }
+
+  if(mail.value){
+
+  }
+  localStorage.setItem('newsletterData', JSON.stringify(data)); // save the data to local storage
+  document.getElementById("newsletter-form").reset(); // reset the form
+
+  
+}
