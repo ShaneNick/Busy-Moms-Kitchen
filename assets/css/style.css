@@ -20,7 +20,6 @@ header{
     align-items: center;
 }
 
-
 nav{
     width: 100%;
 }
@@ -29,7 +28,6 @@ nav{
     display: flex;
     justify-content: right;
     align-items: center;
-
 }
 
 nav ul {
@@ -85,24 +83,18 @@ header input {
     padding: 50px;
     margin: 50px;
     margin-left: 20px;
-    padding-right: 5px;
-   
-   
-   
+    padding-right: 5px;  
 }
 
 aside h2 {
   top: 70%;
   left: 42%;
    position: absolute;
-   background-color: grey;
-  
-    
+   background-color: grey;   
 }
 
 aside img {
     height: 400px;
-
 }
 
   #recipeOfTheDay p {
@@ -167,6 +159,15 @@ aside {
     justify-content: center;
     
 }
+
+/*Search Bar
+.searchedFood{
+  margin : 1.2rem 0;
+  display: flex;
+  align-items: stretch;
+}
+*/
+
 
 
 
