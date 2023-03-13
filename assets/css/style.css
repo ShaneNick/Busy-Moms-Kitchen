@@ -81,6 +81,29 @@ header input {
    
 }
 
+aside h2 {
+  top: 70%;
+  left: 42%;
+   position: absolute;
+   background-color: grey;
+  
+    
+}
+
+aside img {
+    height: 400px;
+
+}
+
+  #recipeOfTheDay p {
+    background-color: black;
+    top: 50%;
+    bottom: 100%;
+    padding: 20px 0;
+    margin: 20px ;
+  }
+
+
 /* .appetizer-box {
     border: white;
     background: grey;
@@ -134,6 +157,7 @@ aside {
     justify-content: center;
     
 }
+
 
 
 footer {
