@@ -65,13 +65,17 @@ function fetchRecipe() {
 
 //displays all recipe info within aside 
 function displayRecipe(recipe) {
+  const summaryList = recipe.summary.split(". ");
+  const summaryHtml = summaryList.map(item => `<li>${item}</li>`).join("");
+
   recipeOfTheDay.innerHTML = `
     <h2>${recipe.title}</h2>
     <img src="${recipe.image}" alt="${recipe.title}">
-    <p>${recipe.summary}</p>
+    <ul>${summaryHtml}</ul>
     <p>${recipe.instructions}</p>
   `;
 }
+
 
 //BEGINNING OF CONTACT SECTION----------------------------------
 function submitForm(event) {
@@ -94,7 +98,5 @@ function submitForm(event) {
   values.push(data);
  // document.getElementById("newsletter-form").reset(); // reset the form
   }
-
-
 
 
