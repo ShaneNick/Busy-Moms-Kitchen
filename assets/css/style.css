@@ -87,23 +87,36 @@ header input {
 }
 
 aside h2 {
-  top: 70%;
+  /* top: 70%;
   left: 42%;
+
    position: absolute;
    background-color: grey;   
 }
 
 aside img {
-    height: 400px;
+    height: 400p
+   position: absolute; */
+   background-color: grey;
+   text-align: center;
+
+
 }
 
   #recipeOfTheDay p {
-    background-color: black;
-    top: 50%;
+    background-color: grey;
+    /* top: 50%;
     bottom: 100%;
     padding: 20px 0;
-    margin: 20px ;
+    margin: 20px ; */
+    
   }
+
+  #recipeOfTheDay {
+  display: flex;
+  flex-direction: column;
+}
+
 
 
 /* .appetizer-box {
@@ -152,9 +165,9 @@ aside img {
 aside {
     border: white;
     padding: 5px;
-    margin-right: 1px;
-    margin-left: 90px;
-    width: 30px;
+    /* margin-right: 1px;
+    margin-left: 90px; */
+    /* width: 30px; */
     display: flex;
     justify-content: center;
     
