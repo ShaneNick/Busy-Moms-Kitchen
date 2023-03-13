@@ -189,7 +189,7 @@ form {
   
   /* Style the submit button */
   input[type=button] {
-    background-color: lightpink;
+    background: lightpink;
     color: grey;
     border: none;
     border-radius: 12px;
