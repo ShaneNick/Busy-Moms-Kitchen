@@ -49,6 +49,11 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
+    font-size: 20px;
+}
+
+#link:hover {
+    color:grey
 }
 
 header input {
@@ -58,6 +63,11 @@ header input {
     outline: 0;
 }
 
+.logo {
+    width: 100px;
+    height: auto;
+
+}
 .welcome-pg {
     border: white;
     background: grey;
@@ -69,9 +79,40 @@ header input {
 }
 
 .food-contanier {
+    border: white;
     display: flex;
+    justify-content: center;
+    padding: 50px;
+    margin: 50px;
+    margin-left: 20px;
+    padding-right: 5px;
+   
+   
    
 }
+
+aside h2 {
+  top: 70%;
+  left: 42%;
+   position: absolute;
+   background-color: grey;
+  
+    
+}
+
+aside img {
+    height: 400px;
+
+}
+
+  #recipeOfTheDay p {
+    background-color: black;
+    top: 50%;
+    bottom: 100%;
+    padding: 20px 0;
+    margin: 20px ;
+  }
+
 
 /* .appetizer-box {
     border: white;
@@ -118,15 +159,15 @@ header input {
 
 aside {
     border: white;
-    background: grey;
-    padding: 50px;
-    margin-right: 100px;
-    margin-left: 10px;
-    width: 600px;
+    padding: 5px;
+    margin-right: 1px;
+    margin-left: 90px;
+    width: 30px;
     display: flex;
     justify-content: center;
     
 }
+
 
 
 footer {
@@ -166,6 +207,7 @@ form {
   /* Add some padding and a grey background color to containers */
   .container {
     padding: 20px;
+    background-color: lightpink;
     border-radius: 25px;
     align-content: center;
   }
@@ -188,7 +230,7 @@ form {
   
   /* Style the submit button */
   input[type=button] {
-    background-color: lightpink;
+    background: lightpink;
     color: grey;
     border: none;
     border-radius: 12px;
