@@ -22,12 +22,6 @@
             </ul>
           </nav>
           <!--Search Bar-->
-          <div class="search-container">
-            <form>
-              <input type="text" placeholder="Search for food...">
-              <button type="submit">Search</button>
-            </form>
-          </div>
           <div class="card-container"></div>      
           <div class="card-container"></div>
         </div>
@@ -35,7 +29,6 @@
       <div class = "foodList"></div>
     </div>
 
-    
 
     <!--This is the welcome page-->
     <div class="welcome-pg">Welcome Page</div>
@@ -43,22 +36,7 @@
       
 
     <!--This is the different sections that links to the different types of recipes-->
-  <div class="food-contanier">
-    <div>
-    <div class="appetizer-box">Appetizer</div>
-      
-    
-    <div class="entree-box">Entree</div>
-     <!-- <p>Short Description - Entree</p>-->
-    </div>
-
-    <div>
-    <div class="dessert-box">Dessert</div>
-     <!-- <p>Short Description - Dessert</p>-->
-    
-    <div class="snack-box">Snack</div>
-    <!--  <p>Short Description -Snack</p>-->
-    </div>
+    <div class="food-contanier">
 
     <!--Aside showing random recipe-->
       <aside id="recipeOfTheDay">Feature Recipe
@@ -68,9 +46,26 @@
         <p class="recipeInstructions"></p>
       </aside>  
 
-  
-
+      <!--Search bar section-->
+      <div class = "searchedFood">
+        <input type = "text" class = "search" placeholder="What would you like to make..." id = "search-input">
+        <button type="submit" class ="search-Btn" id="search-Bar">
+          <i class = mealSearch></i>
+        </button>
       </div>
+    </div>
+    
+    <!--Food Card Section-->
+    <div class="meal-results">
+      <h2 class = "title">Your Food Options:</h2>
+      <div id = "meal"></div>
+      <div class = "mealItem"></div>
+      <img class = "foodImg" alt = "food">
+      <div class ="mealName">
+        <h3>Las Papas Fritas</h3>
+        <a href = "#" class = "recipeBtn">Get Recipe</a>
+      </div>
+  </div>
 
       <!--this section allows users to connect with site by inputting personal info-->
         <footer>

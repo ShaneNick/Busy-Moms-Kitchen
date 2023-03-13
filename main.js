@@ -1,6 +1,16 @@
+const searchBtn = document.getElementById('search-Bar')
+const mealList = document.getElementById('meal')
+const mealInformation = document.querySelector('meal-details-content');
+const recipeCloseBtn = document.getElementById('recipe-close-btn')
 
-//BEGINNING OF SEARCH BAR----------------------------------------
-const searchForm = document.querySelector('.search-container');
+searchBtn.addEventListener('click', getMealList);
+
+function getMealList(){
+  let searchInputTxt = document.getElementById
+  ('search-input').value.trim();
+  console.log(searchInputTxt);
+}
+/*const searchForm = document.querySelector('.search-container');
 const searchInput = searchForm.querySelector('input');
 const cardContainer = document.querySelector('.card-container');
 
@@ -43,7 +53,7 @@ function displayResults(results) {
     
     cardContainer.appendChild(recipeCard);
   });
-}
+}*/
 
 //BEGINNING OF FEATURED RECIPE SECTION---------------------------
 //Checking to see if more than 4 hrs 
