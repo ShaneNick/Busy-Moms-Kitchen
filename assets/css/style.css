@@ -84,7 +84,7 @@ header input {
    
 }
 
-.appetizer-box {
+/* .appetizer-box {
     border: white;
     background: grey;
     padding: 50px;
@@ -125,15 +125,15 @@ header input {
     width: 500px;
     display: flex;
     justify-content: center;
-}
+}  */
 
 aside {
     border: white;
     background: grey;
-    padding: 75px;
-    margin-right: 50px;
-    margin-left: 75px;
-    width: 550px;
+    padding: 50px;
+    margin-right: 100px;
+    margin-left: 10px;
+    width: 600px;
     display: flex;
     justify-content: center;
     
