@@ -12,9 +12,6 @@ color: white;
 }
 
 
-.container{
-
-}
 
 header{
     display: flex;
@@ -22,13 +19,6 @@ header{
     height: 80px;
     align-items: center;
 }
-
-header h1 {
-
-
-
-}
-
 
 
 nav{
