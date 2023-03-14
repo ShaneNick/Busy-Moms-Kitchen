@@ -231,3 +231,134 @@ form {
  padding: 20px;
  
 }
+
+@media screen and (min-width: 600px) {
+  /* header styles */
+  header {
+    height: 80px;
+  }
+  
+  .navbar-rightside {
+    justify-content: center;
+  }
+
+  /* nav styles */
+  nav ul li {
+    padding: 30px;
+  }
+
+  header input {
+    width: 150px;
+    height: 35px;
+  }
+
+  /* welcome page styles */
+  .welcome-pg {
+    padding: 100px;
+    height: 40px;
+  }
+  .food-contanier {
+    padding: 50px;
+    margin: 50px;
+    margin-left: 20px;
+    padding-right: 5px;
+  }
+
+  aside h2 {
+    /* styles */
+  }
+
+  aside img {
+    /* styles */
+  }
+
+  #recipeOfTheDay p {
+    /* styles */
+  }
+
+  aside {
+    padding: 5px;
+  }
+
+  /* searched food styles */
+  .searchedFood input[type="text"] {
+    width: 80%;
+    height: 30px;
+  }
+
+  .searchedFood .searchButton {
+    width: 20%;
+    height: 30px;
+    margin-left: 10px;
+  }
+
+  /* links styles */
+  .links {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* header styles */
+  header {
+    height: 60px;
+  }
+
+  .navbar-rightside {
+    justify-content: center;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  header input {
+    width: 120px;
+    height: 30px;
+  }
+
+  /* welcome page styles */
+  .welcome-pg {
+    padding: 80px;
+    height: 30px;
+  }
+  .food-contanier {
+    padding: 30px;
+    margin: 30px;
+    margin-left: 10px;
+    padding-right: 2px;
+    flex-direction: column;
+  }
+
+  aside h2 {
+    /* styles */
+  }
+
+  aside img {
+    /* styles */
+  }
+
+  #recipeOfTheDay p {
+    /* styles */
+  }
+
+  aside {
+    /* styles */
+  }
+
+  /* searched food styles */
+  .searchedFood input[type="text"] {
+    width: 80%;
+    height: 30px;
+  }
+
+  .searchedFood .searchButton {
+    width: 20%;
+    height: 30px;
+    margin-left: 10px;
+  }
+
+  /* links styles */
+  .links {
+    padding: 10px;
+  }
+}
