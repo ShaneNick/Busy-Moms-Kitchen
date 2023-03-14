@@ -133,7 +133,38 @@ aside {
     
 }
 
-.searchedFood{
+.btn{
+  font-family:inherit;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-family: sans-serif;
+}
+
+.text{
+  opacity: 0.8;
+}
+.title{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.continer1{
+  min-height: 100vh;
+}
+
+.meal-wrapper{
+  max-width :1280px;
+  margin: 0 auto;
+  padding :2rem;
+  background: lightpink;
+  text-align: center;
+}
+.meal-search{
+  margin: 2rem 0;
+}
+
+
+.searchedFoodBox{
   margin: 1.2rem 0;
   display: flex;
   align-items: stretch;
@@ -144,10 +175,8 @@ aside {
   width: 100%;
 }
 
+
 .search-control{
-  padding: 0
-}
-.search-Bar{
   padding : 0 1rem;
   font-size: 1.1rem;
   font-family: inherit;
@@ -158,13 +187,76 @@ aside {
   border-bottom-left-radius:2rem;
 }
 
+.search-control ::placeholder{
+  color: teal;
+}
 
+.search-Btn{
+  width: 55px;
+  height: 55px;
+  font-size: 1.8rem;
+  background: teal;
+  color:#fff;
+  border:none;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.search-btn:hover{
+  background: black;
+}
+
+.meal-results{
+  margin-top: 4rem;
+}
+
+#meal{
+  margin: 2.4rem 0;
+}
+
+.mealItem{
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 21px;
+  margin:  2rem 0;
+  display: flex;
+}
+
+.foodimg img{
+  width: 100%;
+  height: auto;
+
+}
+
+.mealName{
+  padding: 1.5rem 0.5rem;
+  flex: 1;
+}
+
+.mealName h3{
+  font-size:1.4rem;
+}
+.recipeBtn{
+  text-decoration: none;
+  color:#fff;
+  background: teal;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding:0.75rem 0;
+  display:block;
+  width: 175px;
+  margin: 1rem auto;
+  border-radius: 2rem;
+}
+
+.recipe-btn:hover{
+  background:black;
+}
 .notFound{
   grid-template-columns: 1fr!important;
   color: grey;
   font-size: 29px;
 }
-
 
 
 footer {
@@ -201,46 +293,43 @@ form {
     align-items: center;
   }
   
-  /* Add some padding and a grey background color to containers */
+
   .container {
     padding: 20px;
     background-color: lightpink;
-    border-radius: 25px;
     align-content: center;
   }
   
-  /* Style the input elements and the submit button */
-  input[type=text], input[type=submit] {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border-radius: 25px;
-  }
   
-  /* Add margins to the checkbox */
-  input[type=checkbox] {
-    margin-top: 16px;
-  }
-  
-  /* Style the submit button */
-  input[type=button] {
-    background: lightpink;
-    color: grey;
-    border: none;
-    border-radius: 12px;
-    font-size: 30px;
-  }
-  
-  input[type=submit]:hover {
-    opacity: 0.8;
-  }
 
-
+ .txt_entered input[type=text], 
+ .txt_entered input[type=submit] {
+   width: 100%;
+   padding: 12px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+   border-radius: 25px;
+   font-family: sans-serif;
+ }
+ /*
+ input[type=button] {
+   background: lightpink;
+   color: grey;
+   border: none;
+   border-radius: 12px;
+   font-size: 30px;
+ }
+ 
+ input[type=submit]:hover {
+   opacity: 0.8;
+ }
+ */
+ 
+  
 .links {
-  background-color: grey;
+ background-color: grey;
  display: flex;
  flex-direction: column;
  align-items: center;
