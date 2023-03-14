@@ -119,19 +119,60 @@ aside img {
     margin: 20px ; */
     
   }
-
-  #recipeOfTheDay {
+/*Aside styling*/
+#recipeOfTheDay {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  padding: 2rem;
+  }
+  
+  .asideBox {
   display: flex;
   flex-direction: column;
-}
-
-aside {
-    border: white;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    
-}
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .recipeName {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  }
+  
+  .recipeImage {
+  width: 350px;
+  height: 350px;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  margin-right: 1.5rem;
+  }
+  
+  .recipeContent {
+  width: calc(100% - 371px);
+  margin-left:auto;
+  }
+  
+  #recipeSummary {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  margin-left: 10px;
+  }
+  
+  .recipeInstructions {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  }
+  
+  aside {
+  border: none;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  }
 
 .btn{
   font-family:inherit;

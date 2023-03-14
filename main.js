@@ -37,38 +37,7 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputTxt}`)
     });
   }
   
-  // Get all the recipe buttons on the page
-const recipeButtons = document.querySelectorAll('.recipeBtn');
 
-// Loop through each recipe button and add an onclick event listener
-recipeButtons.forEach(button => {
-  button.addEventListener('click', (event) => {
-    // Stop the default link behavior
-    event.preventDefault();
-
-    // Get the meal ID from the data-id attribute of the clicked button's parent element
-    const mealId = event.target.parentElement.dataset.id;
-
-    // Make another API call to get the recipe details for the selected meal
-    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
-      .then(response => response.json())
-      .catch(err => console.error(err))
-      .then(data => {
-        // Create a new element to hold the recipe information
-        const recipeElement = document.createElement('div');
-
-        // Update the HTML inside the new element with the recipe details
-        recipeElement.innerHTML = `
-          <h2>${data.meals[0].strMeal}</h2>
-          <img src="${data.meals[0].strMealThumb}" alt="${data.meals[0].strMeal}">
-          <p>${data.meals[0].strInstructions}</p>
-        `;
-
-        // Insert the new element after the meal image
-        event.target.parentElement.insertAdjacentElement('afterend', recipeElement);
-      });
-  });
-});
 
   
 //BEGINNING OF FEATURED RECIPE SECTION---------------------------
