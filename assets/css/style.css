@@ -20,7 +20,6 @@ header{
     align-items: center;
 }
 
-
 nav{
     width: 100%;
 }
@@ -29,7 +28,6 @@ nav{
     display: flex;
     justify-content: right;
     align-items: center;
-
 }
 
 nav ul {
@@ -85,25 +83,23 @@ header input {
     padding: 50px;
     margin: 50px;
     margin-left: 20px;
-    padding-right: 5px;
-   
-   
-   
+    padding-right: 5px;  
 }
 
 aside h2 {
   /* top: 70%;
   left: 42%;
-   position: absolute; */
-   background-color: grey;
-   text-align: center;
-  
-    
+
+   position: absolute;
+   background-color: grey;   
 }
 
 aside img {
     height: 300px;
-   
+   position: absolute; 
+   background-color: grey;
+   text-align: center;
+
 }
 
   #recipeOfTheDay p {
@@ -120,61 +116,39 @@ aside img {
   flex-direction: column;
 }
 
-
-
-/* .appetizer-box {
-    border: white;
-    background: grey;
-    padding: 50px;
-    margin: 20px;
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    
-}
-
-.entree-box {
-    border: white;
-    background: grey;
-    padding: 50px;
-    margin: 20px;
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    
-}
-
-.dessert-box {
-    border: white;
-    background: grey;
-    padding: 50px;
-    margin: 20px;
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    
-}
-
-.snack-box {
-    border: white;
-    background: grey;
-    padding: 50px;
-    margin: 20px;
-    width: 500px;
-    display: flex;
-    justify-content: center;
-}  */
-
 aside {
     border: white;
     padding: 5px;
-    /* margin-right: 1px;
-    margin-left: 90px; */
-    /* width: 30px; */
     display: flex;
     justify-content: center;
     
 }
+
+.searchedFood {
+  display: flex;
+  align-items: center;
+}
+
+.searchedFood input[type="text"] {
+  width: 80%;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+}
+
+.searchedFood .searchButton {
+  width: 20%;
+  height: 30px;
+  margin-left: 10px;
+  background-color: #ccc;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 
 
 

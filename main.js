@@ -6,55 +6,35 @@ const recipeCloseBtn = document.getElementById('recipe-close-btn')
 searchBtn.addEventListener('click', getMealList);
 
 function getMealList(){
+  console.log("hello");
   let searchInputTxt = document.getElementById
   ('search-input').value.trim();
-  console.log(searchInputTxt);
-}
-/*const searchForm = document.querySelector('.search-container');
-const searchInput = searchForm.querySelector('input');
-const cardContainer = document.querySelector('.card-container');
+fetch('https://www.themealdb.com/api/json/v1/1/filter.php?i=egg')
+	.then(response => response.json())
+  .catch(err => console.error(err))
+	.then(data => {
+    let html =""
+    console.log(data);
+    if(data.meals){
+        data.meals.forEach(meal=> {
+          html += `
+           <div class = "mealItem" data-id = "${meal.idMeal}">
+              <div class = "meal-img">
+              <img src =  "${meal.strMealThumb}" alt = "food">
+           </div>
+           <div class ="mealName">
+               <h3>${meal.strMeal}</h3>
+               <a href = "#" class = "recipeBtn">Get Recipe</a>
+           </div>
+          </div>`;
+        });
+       }
+       console.log(html)
+       mealList.innerHTML =html;
+    });
+  }
 
-searchForm.addEventListener('submit', e => {
-  e.preventDefault()});
   
-  const searchedFood = searchInput.value;
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': 'c738b8e630msh46d9946134aa62fp15873bjsnf8b31cb51c1d',
-      'X-RapidAPI-Host': 'webknox-recipes.p.rapidapi.com'
-    }
-  };
-  
-  fetch('https://webknox-recipes.p.rapidapi.com/recipes/findByIngredients?ingredients=apples%2Cflour%2Csugar&number=5', options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
-
-function displayResults(results) {
-  cardContainer.innerHTML = '';
-  
-  results.forEach(result => {
-    const recipeCard = document.createElement('div');
-    recipeCard.classList.add('recipeCard');
-    
-    const recipeTitle = document.createElement('h3');
-    recipeTitle.textContent = result.title;
-    
-    const recipeImage = document.createElement('img');
-    recipeImage.src = result.image;
-    
-    const recipeSummary = document.createElement('p');
-    recipeSummary.textContent = result.summary;
-    
-    recipeCard.appendChild(recipeTitle);
-    recipeCard.appendChild(recipeImage);
-    recipeCard.appendChild(recipeSummary);
-    
-    cardContainer.appendChild(recipeCard);
-  });
-}*/
-
 //BEGINNING OF FEATURED RECIPE SECTION---------------------------
 //Checking to see if more than 4 hrs 
 const form = document.querySelector('form');
@@ -85,13 +65,17 @@ function fetchRecipe() {
 
 //displays all recipe info within aside 
 function displayRecipe(recipe) {
+  const summaryList = recipe.summary.split(". ");
+  const summaryHtml = summaryList.map(item => `<li>${item}</li>`).join("");
+
   recipeOfTheDay.innerHTML = `
     <h2>${recipe.title}</h2>
     <img src="${recipe.image}" alt="${recipe.title}">
-    <p>${recipe.summary}</p>
+    <ul>${summaryHtml}</ul>
     <p>${recipe.instructions}</p>
   `;
 }
+
 
 //BEGINNING OF CONTACT SECTION----------------------------------
 function submitForm(event) {
@@ -101,19 +85,18 @@ function submitForm(event) {
     email: document.querySelector('#newsletter-form [name="mail"]').value,
   };
   
-  if (!email.includes("@")) {
+  if (!data.email.includes("@")) {
     var errorMessage = document.getElementById("error-message");
     errorMessage.innerHTML = "Not a valid email address.";
     return;
   }
 
-  if(mail.value){
+ 
+  //localStorage.setItem('Data', JSON.stringify(data)); 
 
+  var values = JSON.parse(localStorage.getItem('Data') || '[]');
+  values.push(data);
+ // document.getElementById("newsletter-form").reset(); // reset the form
   }
-  localStorage.setItem('newsletterData', JSON.stringify(data)); // save the data to local storage
-  document.getElementById("newsletter-form").reset(); // reset the form
-
-  
-}
 
 
