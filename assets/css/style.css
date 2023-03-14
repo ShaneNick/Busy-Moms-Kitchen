@@ -95,11 +95,10 @@ aside h2 {
 }
 
 aside img {
-    height: 400p
-   position: absolute; */
+    height: 300px;
+   position: absolute; 
    background-color: grey;
    text-align: center;
-
 
 }
 
@@ -117,70 +116,45 @@ aside img {
   flex-direction: column;
 }
 
-
-
-/* .appetizer-box {
-    border: white;
-    background: grey;
-    padding: 50px;
-    margin: 20px;
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    
-}
-
-.entree-box {
-    border: white;
-    background: grey;
-    padding: 50px;
-    margin: 20px;
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    
-}
-
-.dessert-box {
-    border: white;
-    background: grey;
-    padding: 50px;
-    margin: 20px;
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    
-}
-
-.snack-box {
-    border: white;
-    background: grey;
-    padding: 50px;
-    margin: 20px;
-    width: 500px;
-    display: flex;
-    justify-content: center;
-}  */
-
 aside {
     border: white;
     padding: 5px;
-    /* margin-right: 1px;
-    margin-left: 90px; */
-    /* width: 30px; */
     display: flex;
     justify-content: center;
     
 }
 
-/*Search Bar
 .searchedFood{
-  margin : 1.2rem 0;
+  margin: 1.2rem 0;
   display: flex;
   align-items: stretch;
 }
-*/
 
+.search-control,
+.search-Btn{
+  width: 100%;
+}
+
+.search-control{
+  padding: 0
+}
+.search-Bar{
+  padding : 0 1rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: 0;
+  border:1px solid gray;
+  color: gray;
+  border-top-left-radius:2rem;
+  border-bottom-left-radius:2rem;
+}
+
+
+.notFound{
+  grid-template-columns: 1fr!important;
+  color: grey;
+  font-size: 29px;
+}
 
 
 
@@ -256,3 +230,11 @@ form {
   }
 
 
+.links {
+  background-color: grey;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 20px;
+ 
+}
