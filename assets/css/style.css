@@ -95,11 +95,10 @@ aside h2 {
 }
 
 aside img {
-    height: 400p
-   position: absolute; */
+    height: 300px;
+   position: absolute; 
    background-color: grey;
    text-align: center;
-
 
 }
 
@@ -224,3 +223,11 @@ form {
     opacity: 0.8;
   }
 
+.links {
+  background-color: grey;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 20px;
+ 
+}
