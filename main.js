@@ -9,7 +9,7 @@ function getMealList(){
   console.log("hello");
   let searchInputTxt = document.getElementById
   ('search-input').value.trim();
-fetch('https://www.themealdb.com/api/json/v1/1/filter.php?i=egg')
+fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputTxt}`)
 	.then(response => response.json())
   .catch(err => console.error(err))
 	.then(data => {
@@ -28,8 +28,11 @@ fetch('https://www.themealdb.com/api/json/v1/1/filter.php?i=egg')
            </div>
           </div>`;
         });
+      
+       } else{
+        html = "Sorry, we couldn't find any meals";
+        mealList.classList.add(`notFound`);
        }
-       console.log(html)
        mealList.innerHTML =html;
     });
   }
