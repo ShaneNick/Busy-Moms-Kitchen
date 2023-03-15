@@ -3,13 +3,11 @@
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  
 }
 
 body{
 background: lightpink;
 color: white;
-
 }
 
 
@@ -113,11 +111,11 @@ aside img {
    background-color: grey;
    text-align: center;
    display: flex;
+   flex: wrap;
    position: relative;
 
-  
-   
 }
+
 
   #recipeOfTheDay p {
     background-color: grey;
@@ -171,6 +169,7 @@ aside img {
   display: flex;
   flex: wrap;
   margin-left: 10px;
+  float:left;
   }
   
   .recipeInstructions {
