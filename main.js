@@ -68,18 +68,22 @@ function fetchRecipe() {
     .catch(error => console.error(`Unable to fetch recipe: ${error.message}`));
 }
 
-//displays all recipe info within aside 
+
 function displayRecipe(recipe) {
   const summaryList = recipe.summary.split(". ");
-  const summaryHtml = summaryList.map(item => `<li>${item}</li>`).join("");
+  
+  const summaryHtml = summaryList.slice(0, -1).map(item => `<li>${item}</li>`).join("");
 
-  recipeOfTheDay.innerHTML = `
-    <h2>${recipe.title}</h2>
-    <img src="${recipe.image}" alt="${recipe.title}">
-    <ul>${summaryHtml}</ul>
-    <p>${recipe.instructions}</p>
+ recipeOfTheDay.innerHTML = `
+
+      <h2 id="recipe-title">${recipe.title}</h2>
+      <img id ="recipe-image"src="${recipe.image}" alt="${recipe.title}">
+      <ul id="summary-html">${summaryHtml}</ul>
+      <p id="recipe-instructions">${recipe.instructions}</p>
+
   `;
 }
+
 
 
 //BEGINNING OF CONTACT SECTION----------------------------------
@@ -101,7 +105,10 @@ function submitForm(event) {
 
   var values = JSON.parse(localStorage.getItem('Data') || '[]');
   values.push(data);
- // document.getElementById("newsletter-form").reset(); // reset the form
+
   }
+
+
+
 
 
