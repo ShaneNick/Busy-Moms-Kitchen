@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  
 }
 
 body{
@@ -101,7 +102,7 @@ header input {
 }
 
 aside h2 {
-  /* top: 70%;
+  top: 70%;
   left: 42%;
 
    position: absolute;
@@ -109,19 +110,23 @@ aside h2 {
 }
 
 aside img {
-    height: 300px;
-   position: absolute; 
+   height: 300px; 
    background-color: grey;
    text-align: center;
+   display: flex;
+   position: absolute;
 
+  
+   
 }
 
   #recipeOfTheDay p {
     background-color: grey;
-    /* top: 50%;
+    top: 50%;
     bottom: 100%;
     padding: 20px 0;
-    margin: 20px ; */
+    margin: 20px; 
+
     
   }
 /*Aside styling*/
@@ -131,6 +136,7 @@ aside img {
   box-shadow: 0 10px 20px rgb(255, 255, 255);
   display: flex;
   padding: 2rem;
+  flex-wrap: wrap;
   }
   
   .asideBox {
@@ -163,13 +169,16 @@ aside img {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  display: inline-block;
+  display: flex;
+  flex: wrap;
   margin-left: 10px;
   }
   
   .recipeInstructions {
   font-size: 1.2rem;
   line-height: 1.6;
+  display:flex;
+  flex: wrap; 
   }
   
   aside {
