@@ -416,6 +416,7 @@ form {
 
   aside img {
     /* styles */
+    
   }
 
   #recipeOfTheDay p {
@@ -424,6 +425,11 @@ form {
 
   aside {
     /* styles */
+    
+  }
+  .asideBox{
+    display: flex;
+    flex-direction: column;
   }
 
   /* searched food styles */
