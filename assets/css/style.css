@@ -102,7 +102,7 @@ header input {
 aside h2 {
   top: 70%;
   left: 42%;
-   position: absolute;
+    position: absolute;  
    background-color: grey;   
 }
 
@@ -424,6 +424,7 @@ form {
 
   aside h2 {
     /* styles */
+   
   }
 
   aside img {
