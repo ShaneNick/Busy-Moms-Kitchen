@@ -102,7 +102,6 @@ header input {
 aside h2 {
   top: 70%;
   left: 42%;
-
    position: absolute;
    background-color: grey;   
 }
@@ -114,6 +113,7 @@ aside img {
    display: flex;
    flex: wrap;
    position: relative;
+
 }
 
 
