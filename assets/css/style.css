@@ -121,9 +121,9 @@ aside img {
   }
 /*Aside styling*/
 #recipeOfTheDay {
-  background-color: #fff;
+  background-color: rgba(207, 105, 122, 0.411);
   border-radius: 1rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgb(255, 255, 255);
   display: flex;
   padding: 2rem;
   }
