@@ -75,8 +75,10 @@ header input {
     padding: 100px;
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 40px;
     font-size: large;
+    
     
 }
 
