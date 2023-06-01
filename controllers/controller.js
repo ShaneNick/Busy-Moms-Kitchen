@@ -1,5 +1,5 @@
-import * as Model from './model.js';
-import * as View from './view.js';
+const Model = require('./model.js');
+const View = require('./view.js');
 
 document.addEventListener('DOMContentLoaded', function() {
   const searchBtn = document.getElementById('search-Bar');

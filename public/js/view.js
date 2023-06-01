@@ -1,4 +1,11 @@
-export function renderMealList(meals) {
+ const searchBtn = document.getElementById('search-Bar');
+const mealList = document.getElementById('meal');
+const mealInformation = document.querySelector('.meal-details-content');
+const recipeCloseBtn = document.getElementById('recipe-close-btn');
+
+searchBtn.addEventListener('click', getMealList);
+
+ function renderMealList(meals) {
     let html = "";
     if (meals) {
       meals.forEach(meal => {
@@ -19,7 +26,7 @@ export function renderMealList(meals) {
     return html;
   }
   
-  export function renderMealDetails(meal) {
+   function renderMealDetails(meal) {
     let html = `
       <h2>${meal.strMeal}</h2>
       <img src="${meal.strMealThumb}" alt="${meal.strMeal}">

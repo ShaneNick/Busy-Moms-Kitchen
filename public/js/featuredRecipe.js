@@ -24,17 +24,22 @@ function fetchRecipe() {
 
 function displayRecipe(recipe) {
   const summaryList = recipe.summary.split(". ");
-  const summaryHtml = summaryList.slice(0, -1).map(item => `<ol>${item}</ol>`).join("");
+  const summaryHtml = summaryList.slice(0, -1).map(item => `<li>${item}</li>`).join("");
+
+  const instructionsList = recipe.instructions.split(". ");
+  const instructionsHtml = instructionsList.slice(0, -1).map(item => `<li>${item}.</li>`).join("");
 
   recipeOfTheDay.innerHTML = `
-    <h2 id="recipe-title">${recipe.title}</h2>
-    <div id="recipe-summary-container">
-      <ul id="summary-html">${summaryHtml}</ul>
-    </div>
-    <img id="recipe-image" src="${recipe.image}" alt="${recipe.title}">
-    <div id="recipe-instructions-container">
-      <p id="recipe-instructions">${recipe.instructions}</p>
-    </div>
-  `;
+  <h1>Recipe Of The Day</h1>
+  <h2 id="recipe-title">${recipe.title}</h2>
+  <div id="recipe-summary-container">
+    <ul id="summary-html">${summaryHtml}</ul>
+  </div>
+  <img id="recipe-image" src="${recipe.image}" alt="${recipe.title}">
+  <div id="recipe-instructions-container">
+    <ol id="recipe-instructions">${instructionsHtml}</ol>
+  </div>
+`;
 }
+
 
