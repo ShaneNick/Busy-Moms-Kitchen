@@ -43,31 +43,4 @@ function getMealList(){
     });
 }
 
-// Function to fetch meal details
-function fetchMealDetails(mealId) {
-  fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
-    .then(console.log('hishaney'))
-    .then(response => response.json())
-    .then(data => {
-      let meal = data.meals[0];
-      let html = `
-        <h2>${meal.strMeal}</h2>
-        <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
-        <ul>`;
-      for (let i = 1; i <= 20; i++) {
-        let ingredient = meal['strIngredient' + i];
-        let measure = meal['strMeasure' + i];
-        if (ingredient != null && ingredient != "" && measure != null && measure != "") {
-          html += `<li>${measure} ${ingredient}</li>`;
-          console.log('peekaboo');
-        }
-      }
-      html += `</ul>`;
-      console.log('Meal Information Element: ', mealInformation);
-mealInformation.innerHTML = html;
-
-      mealInformation.innerHTML = html;
-    })
-    .catch(err => console.error(err));
-}
 

@@ -2,7 +2,7 @@ const express = require('express');
 const exphbs  = require('express-handlebars');
 const path = require('path');
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 // Create an instance of the express-handlebars with the default layout
 const hbs = exphbs.create({
